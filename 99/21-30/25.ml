@@ -10,13 +10,4 @@ let rec rand_select arr n =
         in let rand_pos = Random.int l
         in (List.nth arr rand_pos)::rand_select (drop arr (rand_pos + 1)) (n - 1)
 
-
-
-(*
-    function with pattern match
-    function
-    0 -> 0
-    | 1 ->
-    | 2 ->
-    (takes a argument as pattern match)
-*)
+let permutation arr = rand_select arr (List.length arr)
